@@ -27,6 +27,24 @@ def click(event):
        scvalue.set(x)
 
        screen.update()
+      
+    elif text == "LOG":
+
+       value = int(scvalue.get())
+
+       x=math.log(value,10)
+       scvalue.set(x)
+
+       screen.update()
+      
+    elif text == "EXP":
+
+       value = int(scvalue.get())
+
+       x=math.exp(value)
+       scvalue.set(x)
+
+       screen.update()
 
    elif text == "C":
        scvalue.set("")
@@ -122,6 +140,10 @@ b=Button(f,text="C",padx=5,pady=2,font='lucida 35 bold')
 b.pack(side=LEFT,padx=18,pady=2)
 b.bind("<Button-1>",click)
 
+b=Button(f,text="EXP",padx=5,pady=2,font='lucida 35 bold')
+b.pack(side=LEFT,padx=18,pady=2)
+b.bind("<Button-1>",click)
+
 f.pack()
 
 f=Frame(root, bg="grey")
@@ -138,6 +160,10 @@ b.pack(side=LEFT,padx=18,pady=2)
 b.bind("<Button-1>",click)
 
 b=Button(f,text="=",padx=5,pady=2,font='lucida 35 bold')
+b.pack(side=LEFT,padx=18,pady=2)
+b.bind("<Button-1>",click)
+
+b=Button(f,text="LOG",padx=5,pady=2,font='lucida 35 bold')
 b.pack(side=LEFT,padx=18,pady=2)
 b.bind("<Button-1>",click)
 
